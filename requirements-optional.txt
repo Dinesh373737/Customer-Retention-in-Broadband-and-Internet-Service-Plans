@@ -1,0 +1,2 @@
+# SHAP is optional. The app provides explicit coefficient / perturbation fallbacks.
+shap==0.48.0

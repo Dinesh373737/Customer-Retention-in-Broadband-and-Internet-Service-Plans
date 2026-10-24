@@ -1,0 +1,301 @@
+sample,feature,shap_value,value
+5928,tenure,-0.6507039,1.1564512732824734
+5928,MonthlyCharges,-0.26091316,-1.494962084176534
+5928,TotalCharges,-0.27395982,-0.43835296612236396
+5928,gender_Male,-0.03260438,0.0
+5928,SeniorCitizen_Yes,-0.020129103,0.0
+5928,Partner_Yes,0.00791666,1.0
+5928,Dependents_Yes,-0.08042807,1.0
+5928,PhoneService_Yes,-0.02346136,1.0
+5928,MultipleLines_No phone service,-0.0038870412,0.0
+5928,MultipleLines_Yes,-0.027091691,0.0
+5928,InternetService_Fiber optic,-0.32412153,0.0
+5928,InternetService_No,-0.27530536,1.0
+5928,OnlineSecurity_No internet service,-0.019686662,1.0
+5928,OnlineSecurity_Yes,0.05473094,0.0
+5928,OnlineBackup_No internet service,-0.01062946,1.0
+5928,OnlineBackup_Yes,0.0053775515,0.0
+5928,DeviceProtection_No internet service,0.0,1.0
+5928,DeviceProtection_Yes,-0.003362753,0.0
+5928,TechSupport_No internet service,0.0,1.0
+5928,TechSupport_Yes,0.047967467,0.0
+5928,StreamingTV_No internet service,0.0,1.0
+5928,StreamingTV_Yes,-0.10404844,0.0
+5928,StreamingMovies_No internet service,0.0,1.0
+5928,StreamingMovies_Yes,-0.09608259,0.0
+5928,Contract_One year,0.07128227,0.0
+5928,Contract_Two year,-1.2163156,1.0
+5928,PaperlessBilling_Yes,-0.20159683,0.0
+5928,PaymentMethod_Credit card (automatic),-0.05224918,1.0
+5928,PaymentMethod_Electronic check,-0.16851035,0.0
+5928,PaymentMethod_Mailed check,0.019056072,0.0
+2280,tenure,0.5509321,-1.0021645844241733
+2280,MonthlyCharges,0.3082275,1.1629037321693476
+2280,TotalCharges,0.042629927,-0.6147922532915835
+2280,gender_Male,-0.0022881022,0.0
+2280,SeniorCitizen_Yes,0.10433961,1.0
+2280,Partner_Yes,0.008770136,0.0
+2280,Dependents_Yes,0.040541265,0.0
+2280,PhoneService_Yes,-0.014441824,1.0
+2280,MultipleLines_No phone service,-0.0006431422,0.0
+2280,MultipleLines_Yes,0.14796048,1.0
+2280,InternetService_Fiber optic,0.36078978,1.0
+2280,InternetService_No,0.09191679,0.0
+2280,OnlineSecurity_No internet service,0.010308985,0.0
+2280,OnlineSecurity_Yes,0.08205733,0.0
+2280,OnlineBackup_No internet service,0.0002853561,0.0
+2280,OnlineBackup_Yes,0.023729704,0.0
+2280,DeviceProtection_No internet service,0.0,0.0
+2280,DeviceProtection_Yes,-0.003362753,0.0
+2280,TechSupport_No internet service,0.0,0.0
+2280,TechSupport_Yes,-0.2898195,1.0
+2280,StreamingTV_No internet service,0.0,0.0
+2280,StreamingTV_Yes,0.08894495,1.0
+2280,StreamingMovies_No internet service,0.0,0.0
+2280,StreamingMovies_Yes,0.0887877,1.0
+2280,Contract_One year,0.1231515,0.0
+2280,Contract_Two year,0.2698892,0.0
+2280,PaperlessBilling_Yes,0.11401909,1.0
+2280,PaymentMethod_Credit card (automatic),0.0059590694,1.0
+2280,PaymentMethod_Electronic check,-0.16121846,0.0
+2280,PaymentMethod_Mailed check,-0.0022489901,0.0
+5748,tenure,0.12429386,-0.47269277026971274
+5748,MonthlyCharges,0.29117653,1.1529863224068626
+5748,TotalCharges,-0.18219954,-0.14026009278684706
+5748,gender_Male,-0.01577647,0.0
+5748,SeniorCitizen_Yes,-0.023047682,0.0
+5748,Partner_Yes,-0.0036930784,0.0
+5748,Dependents_Yes,0.030391496,0.0
+5748,PhoneService_Yes,-0.017207878,1.0
+5748,MultipleLines_No phone service,-0.00016333407,0.0
+5748,MultipleLines_Yes,0.14781374,1.0
+5748,InternetService_Fiber optic,0.35166615,1.0
+5748,InternetService_No,0.089244545,0.0
+5748,OnlineSecurity_No internet service,0.0028390826,0.0
+5748,OnlineSecurity_Yes,0.08756805,0.0
+5748,OnlineBackup_No internet service,0.00046064757,0.0
+5748,OnlineBackup_Yes,-0.019005828,1.0
+5748,DeviceProtection_No internet service,0.0,0.0
+5748,DeviceProtection_Yes,-0.003362753,0.0
+5748,TechSupport_No internet service,0.0,0.0
+5748,TechSupport_Yes,0.10260645,0.0
+5748,StreamingTV_No internet service,0.0,0.0
+5748,StreamingTV_Yes,0.097181216,1.0
+5748,StreamingMovies_No internet service,0.0,0.0
+5748,StreamingMovies_Yes,0.11740874,1.0
+5748,Contract_One year,0.13057053,0.0
+5748,Contract_Two year,0.26689023,0.0
+5748,PaperlessBilling_Yes,0.16232559,1.0
+5748,PaymentMethod_Credit card (automatic),-0.0063898917,1.0
+5748,PaymentMethod_Electronic check,-0.1964393,0.0
+5748,PaymentMethod_Mailed check,0.0072600236,0.0
+437,tenure,-1.7615293,1.6044658852593245
+437,MonthlyCharges,0.12691608,1.622410384497802
+437,TotalCharges,-0.30682942,2.6945223658593678
+437,gender_Male,0.07924973,1.0
+437,SeniorCitizen_Yes,-0.016491782,0.0
+437,Partner_Yes,-0.0032032048,1.0
+437,Dependents_Yes,-0.18223706,1.0
+437,PhoneService_Yes,-0.011093665,1.0
+437,MultipleLines_No phone service,-0.0011817003,0.0
+437,MultipleLines_Yes,0.04393593,1.0
+437,InternetService_Fiber optic,0.20985655,1.0
+437,InternetService_No,0.036847234,0.0
+437,OnlineSecurity_No internet service,0.0031885195,0.0
+437,OnlineSecurity_Yes,-0.34832168,1.0
+437,OnlineBackup_No internet service,0.0002853561,0.0
+437,OnlineBackup_Yes,-0.028976686,1.0
+437,DeviceProtection_No internet service,0.0,0.0
+437,DeviceProtection_Yes,-0.000891827,1.0
+437,TechSupport_No internet service,0.0,0.0
+437,TechSupport_Yes,-0.29960287,1.0
+437,StreamingTV_No internet service,0.0,0.0
+437,StreamingTV_Yes,0.095025025,1.0
+437,StreamingMovies_No internet service,0.0,0.0
+437,StreamingMovies_Yes,0.08777805,1.0
+437,Contract_One year,0.041967772,0.0
+437,Contract_Two year,-1.4184803,1.0
+437,PaperlessBilling_Yes,0.054040976,1.0
+437,PaymentMethod_Credit card (automatic),0.021387849,1.0
+437,PaymentMethod_Electronic check,-0.21231815,0.0
+437,PaymentMethod_Mailed check,0.0076641496,0.0
+2976,tenure,0.019296223,-0.5541499724473221
+2976,MonthlyCharges,-0.15041329,-1.3511596426205068
+2976,TotalCharges,-0.08154564,-0.8202550480636297
+2976,gender_Male,-0.01196957,1.0
+2976,SeniorCitizen_Yes,-0.030792387,0.0
+2976,Partner_Yes,-0.0053278664,0.0
+2976,Dependents_Yes,-0.06026631,1.0
+2976,PhoneService_Yes,-0.0164582,1.0
+2976,MultipleLines_No phone service,-0.0033371956,0.0
+2976,MultipleLines_Yes,0.1362276,1.0
+2976,InternetService_Fiber optic,-0.48239815,0.0
+2976,InternetService_No,-0.507986,1.0
+2976,OnlineSecurity_No internet service,-0.026013052,1.0
+2976,OnlineSecurity_Yes,0.06693543,0.0
+2976,OnlineBackup_No internet service,-0.01062946,1.0
+2976,OnlineBackup_Yes,0.015044021,0.0
+2976,DeviceProtection_No internet service,0.0,1.0
+2976,DeviceProtection_Yes,-0.003362753,0.0
+2976,TechSupport_No internet service,0.0,1.0
+2976,TechSupport_Yes,0.0525427,0.0
+2976,StreamingTV_No internet service,0.0,1.0
+2976,StreamingTV_Yes,-0.0804406,0.0
+2976,StreamingMovies_No internet service,0.0,1.0
+2976,StreamingMovies_Yes,-0.09756307,0.0
+2976,Contract_One year,0.15476485,0.0
+2976,Contract_Two year,0.22985433,0.0
+2976,PaperlessBilling_Yes,0.12901019,1.0
+2976,PaymentMethod_Credit card (automatic),0.016712809,1.0
+2976,PaymentMethod_Electronic check,-0.1832272,0.0
+2976,PaymentMethod_Mailed check,0.013394576,0.0
+2235,tenure,-0.42551094,0.34187925150638027
+2235,MonthlyCharges,-0.010368205,0.4422386227621306
+2235,TotalCharges,-0.004336287,0.3932164915296631
+2235,gender_Male,-0.016814683,0.0
+2235,SeniorCitizen_Yes,-0.025845379,0.0
+2235,Partner_Yes,0.008726416,1.0
+2235,Dependents_Yes,-0.06102367,1.0
+2235,PhoneService_Yes,-0.019950783,1.0
+2235,MultipleLines_No phone service,-0.0033371956,0.0
+2235,MultipleLines_Yes,0.07810582,1.0
+2235,InternetService_Fiber optic,-0.35886753,0.0
+2235,InternetService_No,0.06280068,0.0
+2235,OnlineSecurity_No internet service,0.002585582,0.0
+2235,OnlineSecurity_Yes,-0.3031742,1.0
+2235,OnlineBackup_No internet service,0.00046064757,0.0
+2235,OnlineBackup_Yes,-0.021060346,1.0
+2235,DeviceProtection_No internet service,0.0,0.0
+2235,DeviceProtection_Yes,0.0026669127,1.0
+2235,TechSupport_No internet service,0.0,0.0
+2235,TechSupport_Yes,0.08348295,0.0
+2235,StreamingTV_No internet service,0.0,0.0
+2235,StreamingTV_Yes,0.053686652,1.0
+2235,StreamingMovies_No internet service,0.0,0.0
+2235,StreamingMovies_Yes,-0.2137688,0.0
+2235,Contract_One year,-0.5267022,1.0
+2235,Contract_Two year,0.17587669,0.0
+2235,PaperlessBilling_Yes,0.088020734,1.0
+2235,PaymentMethod_Credit card (automatic),0.02143023,1.0
+2235,PaymentMethod_Electronic check,-0.19223857,0.0
+2235,PaymentMethod_Mailed check,0.0057076802,0.0
+1639,tenure,0.05280216,-0.6356071746249313
+1639,MonthlyCharges,-0.032854967,-0.6585938608736635
+1639,TotalCharges,-0.04402215,-0.6751812860790636
+1639,gender_Male,0.004997907,1.0
+1639,SeniorCitizen_Yes,0.13017549,1.0
+1639,Partner_Yes,-0.004721959,0.0
+1639,Dependents_Yes,0.02072137,0.0
+1639,PhoneService_Yes,-0.040236376,1.0
+1639,MultipleLines_No phone service,-0.006539206,0.0
+1639,MultipleLines_Yes,-0.09499943,0.0
+1639,InternetService_Fiber optic,-0.46173882,0.0
+1639,InternetService_No,0.1014592,0.0
+1639,OnlineSecurity_No internet service,0.0042158077,0.0
+1639,OnlineSecurity_Yes,0.07189856,0.0
+1639,OnlineBackup_No internet service,0.0016276414,0.0
+1639,OnlineBackup_Yes,0.008235967,0.0
+1639,DeviceProtection_No internet service,0.0,0.0
+1639,DeviceProtection_Yes,-0.0034908603,0.0
+1639,TechSupport_No internet service,0.0,0.0
+1639,TechSupport_Yes,0.080698706,0.0
+1639,StreamingTV_No internet service,0.0,0.0
+1639,StreamingTV_Yes,-0.09821854,0.0
+1639,StreamingMovies_No internet service,0.0,0.0
+1639,StreamingMovies_Yes,-0.059284974,0.0
+1639,Contract_One year,0.15510161,0.0
+1639,Contract_Two year,0.2161546,0.0
+1639,PaperlessBilling_Yes,0.12750725,1.0
+1639,PaymentMethod_Credit card (automatic),-0.0068941563,0.0
+1639,PaymentMethod_Electronic check,0.32584405,1.0
+1639,PaymentMethod_Mailed check,0.011485394,0.0
+3761,tenure,-1.5429775,1.6044658852593245
+3761,MonthlyCharges,-0.0647024,0.5843881626910774
+3761,TotalCharges,-0.106494896,1.5787370362445177
+3761,gender_Male,-0.061924748,0.0
+3761,SeniorCitizen_Yes,-0.023298113,0.0
+3761,Partner_Yes,0.008652189,1.0
+3761,Dependents_Yes,0.021678649,0.0
+3761,PhoneService_Yes,-0.038609695,1.0
+3761,MultipleLines_No phone service,-0.0033371956,0.0
+3761,MultipleLines_Yes,0.07616581,1.0
+3761,InternetService_Fiber optic,-0.28889662,0.0
+3761,InternetService_No,0.05258226,0.0
+3761,OnlineSecurity_No internet service,0.002585582,0.0
+3761,OnlineSecurity_Yes,-0.351354,1.0
+3761,OnlineBackup_No internet service,0.00046064757,0.0
+3761,OnlineBackup_Yes,-0.0060397224,1.0
+3761,DeviceProtection_No internet service,0.0,0.0
+3761,DeviceProtection_Yes,-0.000891827,1.0
+3761,TechSupport_No internet service,0.0,0.0
+3761,TechSupport_Yes,0.09792279,0.0
+3761,StreamingTV_No internet service,0.0,0.0
+3761,StreamingTV_Yes,0.085493855,1.0
+3761,StreamingMovies_No internet service,0.0,0.0
+3761,StreamingMovies_Yes,0.1145172,1.0
+3761,Contract_One year,0.048014883,0.0
+3761,Contract_Two year,-1.3236625,1.0
+3761,PaperlessBilling_Yes,0.064645514,1.0
+3761,PaymentMethod_Credit card (automatic),0.02863204,1.0
+3761,PaymentMethod_Electronic check,-0.2634325,0.0
+3761,PaymentMethod_Mailed check,0.0070433263,0.0
+4460,tenure,-0.033723213,-0.5948785735361267
+4460,MonthlyCharges,-0.072140954,0.43727991788088855
+4460,TotalCharges,-0.16854973,-0.3695589356580472
+4460,gender_Male,0.0043438394,1.0
+4460,SeniorCitizen_Yes,-0.0240339,0.0
+4460,Partner_Yes,0.0019792889,1.0
+4460,Dependents_Yes,0.026622621,0.0
+4460,PhoneService_Yes,-0.03068552,1.0
+4460,MultipleLines_No phone service,-0.002054419,0.0
+4460,MultipleLines_Yes,-0.11979775,0.0
+4460,InternetService_Fiber optic,0.32517993,1.0
+4460,InternetService_No,0.07550737,0.0
+4460,OnlineSecurity_No internet service,0.004249273,0.0
+4460,OnlineSecurity_Yes,0.06799167,0.0
+4460,OnlineBackup_No internet service,0.00062291446,0.0
+4460,OnlineBackup_Yes,0.011789591,0.0
+4460,DeviceProtection_No internet service,0.0,0.0
+4460,DeviceProtection_Yes,0.0027052932,1.0
+4460,TechSupport_No internet service,0.0,0.0
+4460,TechSupport_Yes,-0.30030584,1.0
+4460,StreamingTV_No internet service,0.0,0.0
+4460,StreamingTV_Yes,-0.08332011,0.0
+4460,StreamingMovies_No internet service,0.0,0.0
+4460,StreamingMovies_Yes,-0.04981082,0.0
+4460,Contract_One year,0.17112854,0.0
+4460,Contract_Two year,0.24028504,0.0
+4460,PaperlessBilling_Yes,-0.3079734,0.0
+4460,PaymentMethod_Credit card (automatic),-0.0044730306,0.0
+4460,PaymentMethod_Electronic check,0.2558266,1.0
+4460,PaymentMethod_Mailed check,0.010528995,0.0
+3568,tenure,0.048679877,-0.47269277026971274
+3568,MonthlyCharges,0.24525823,1.1298456996277322
+3568,TotalCharges,-0.17994036,-0.156085127475266
+3568,gender_Male,-0.009305967,0.0
+3568,SeniorCitizen_Yes,-0.022647979,0.0
+3568,Partner_Yes,0.008793867,0.0
+3568,Dependents_Yes,0.034195792,0.0
+3568,PhoneService_Yes,-0.02296232,1.0
+3568,MultipleLines_No phone service,-0.002054419,0.0
+3568,MultipleLines_Yes,-0.10549812,0.0
+3568,InternetService_Fiber optic,0.34954542,1.0
+3568,InternetService_No,0.068857566,0.0
+3568,OnlineSecurity_No internet service,0.0028390826,0.0
+3568,OnlineSecurity_Yes,0.08495001,0.0
+3568,OnlineBackup_No internet service,0.0002853561,0.0
+3568,OnlineBackup_Yes,-0.02459507,1.0
+3568,DeviceProtection_No internet service,0.0,0.0
+3568,DeviceProtection_Yes,-0.003362753,0.0
+3568,TechSupport_No internet service,0.0,0.0
+3568,TechSupport_Yes,-0.33813965,1.0
+3568,StreamingTV_No internet service,0.0,0.0
+3568,StreamingTV_Yes,0.096837014,1.0
+3568,StreamingMovies_No internet service,0.0,0.0
+3568,StreamingMovies_Yes,0.09912087,1.0
+3568,Contract_One year,0.12163979,0.0
+3568,Contract_Two year,0.26738593,0.0
+3568,PaperlessBilling_Yes,0.1367725,1.0
+3568,PaymentMethod_Credit card (automatic),-0.0006152622,0.0
+3568,PaymentMethod_Electronic check,-0.17257906,0.0
+3568,PaymentMethod_Mailed check,0.0064784302,0.0

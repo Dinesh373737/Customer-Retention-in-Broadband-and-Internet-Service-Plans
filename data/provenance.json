@@ -1,0 +1,33 @@
+{
+  "source_file": "data\\Telco-Customer-Churn.csv",
+  "original_local_file": "Telco-Customer-Churn.csv (user-provided local file)",
+  "source_repository": "https://github.com/IBM/telco-customer-churn-on-icp4d",
+  "raw_source": "https://raw.githubusercontent.com/IBM/telco-customer-churn-on-icp4d/master/data/Telco-Customer-Churn.csv",
+  "sha256": "16320c9c1ec72448db59aa0a26a0b95401046bef5d02fd3aeb906448e3055e91",
+  "records": 7043,
+  "columns": [
+    "customerID",
+    "gender",
+    "SeniorCitizen",
+    "Partner",
+    "Dependents",
+    "tenure",
+    "PhoneService",
+    "MultipleLines",
+    "InternetService",
+    "OnlineSecurity",
+    "OnlineBackup",
+    "DeviceProtection",
+    "TechSupport",
+    "StreamingTV",
+    "StreamingMovies",
+    "Contract",
+    "PaperlessBilling",
+    "PaymentMethod",
+    "MonthlyCharges",
+    "TotalCharges",
+    "Churn"
+  ],
+  "sample_file": "sample_telco.csv",
+  "sample_note": "240 actual records sampled from the full CSV without replacement, random_state=42. Used only if configured file is unavailable; never synthetic."
+}

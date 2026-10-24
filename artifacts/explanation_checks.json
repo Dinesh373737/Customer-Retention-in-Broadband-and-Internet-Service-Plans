@@ -1,0 +1,26 @@
+[
+  {
+    "model": "Logistic Regression",
+    "status": "computed",
+    "samples": 10,
+    "encoded_features": 30,
+    "rows": 300,
+    "description": "SHAP on 10 reproducibly sampled records; units: raw logistic log odds. Categorical inputs are one-hot encoded and numeric inputs standardized. This explains the fitted raw base model before optional calibration, not intervention effects."
+  },
+  {
+    "model": "Random Forest",
+    "status": "computed",
+    "samples": 10,
+    "encoded_features": 30,
+    "rows": 300,
+    "description": "SHAP on 10 reproducibly sampled records; units: raw forest probability. Categorical inputs are one-hot encoded and numeric inputs standardized. This explains the fitted raw base model before optional calibration, not intervention effects."
+  },
+  {
+    "model": "XGBoost",
+    "status": "computed",
+    "samples": 10,
+    "encoded_features": 30,
+    "rows": 300,
+    "description": "SHAP on 10 reproducibly sampled records; units: raw XGBoost log odds. Categorical inputs are one-hot encoded and numeric inputs standardized. This explains the fitted raw base model before optional calibration, not intervention effects."
+  }
+]

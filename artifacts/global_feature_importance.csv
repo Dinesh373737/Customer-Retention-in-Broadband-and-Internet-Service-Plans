@@ -1,0 +1,121 @@
+feature,importance,coefficient,odds_ratio,reference,method,model
+Contract_Two year,1.2112239385133454,-1.2112239385133454,0.2978325275574845,category versus Contract=Month-to-month,raw logistic coefficient (before optional probability calibration),Logistic Regression
+tenure,1.2039793282082083,-1.2039793282082083,0.29999804284170245,per training standard deviation,raw logistic coefficient (before optional probability calibration),Logistic Regression
+InternetService_Fiber optic,1.10932122604271,1.10932122604271,3.032299449838487,category versus InternetService=DSL,raw logistic coefficient (before optional probability calibration),Logistic Regression
+Contract_One year,0.6084345330634783,-0.6084345330634783,0.5442021330339092,category versus Contract=Month-to-month,raw logistic coefficient (before optional probability calibration),Logistic Regression
+TotalCharges,0.4940207466168116,0.4940207466168116,1.6388925619170307,per training standard deviation,raw logistic coefficient (before optional probability calibration),Logistic Regression
+MonthlyCharges,0.46759139931627414,-0.46759139931627414,0.626509463560557,per training standard deviation,raw logistic coefficient (before optional probability calibration),Logistic Regression
+PhoneService_Yes,0.43303181102399624,-0.43303181102399624,0.6485398607597573,category versus PhoneService=No,raw logistic coefficient (before optional probability calibration),Logistic Regression
+OnlineSecurity_Yes,0.42849876792222336,-0.42849876792222336,0.6514863932355941,category versus OnlineSecurity=No,raw logistic coefficient (before optional probability calibration),Logistic Regression
+PaymentMethod_Electronic check,0.42600257185496615,0.42600257185496615,1.5311247129588805,category versus PaymentMethod=Bank transfer (automatic),raw logistic coefficient (before optional probability calibration),Logistic Regression
+StreamingMovies_Yes,0.4157568130954604,0.4157568130954604,1.5155172700994965,category versus StreamingMovies=No,raw logistic coefficient (before optional probability calibration),Logistic Regression
+StreamingTV_Yes,0.3943792217774514,0.3943792217774514,1.4834630034974234,category versus StreamingTV=No,raw logistic coefficient (before optional probability calibration),Logistic Regression
+TechSupport_Yes,0.3696060399974227,-0.3696060399974227,0.6910065059456051,category versus TechSupport=No,raw logistic coefficient (before optional probability calibration),Logistic Regression
+PaperlessBilling_Yes,0.3549872678590438,0.3549872678590438,1.4261624960639574,category versus PaperlessBilling=No,raw logistic coefficient (before optional probability calibration),Logistic Regression
+MultipleLines_Yes,0.3274249198152711,0.3274249198152711,1.387390881823791,category versus MultipleLines=No,raw logistic coefficient (before optional probability calibration),Logistic Regression
+MultipleLines_No phone service,0.21029849709200044,-0.21029849709200044,0.8103423250380872,category versus MultipleLines=No,raw logistic coefficient (before optional probability calibration),Logistic Regression
+Dependents_Yes,0.20907727851140723,-0.20907727851140723,0.811332534650189,category versus Dependents=No,raw logistic coefficient (before optional probability calibration),Logistic Regression
+TechSupport_No internet service,0.18214790321159804,-0.18214790321159804,0.8334780572175106,category versus TechSupport=No,raw logistic coefficient (before optional probability calibration),Logistic Regression
+DeviceProtection_No internet service,0.18214790321159804,-0.18214790321159804,0.8334780572175106,category versus DeviceProtection=No,raw logistic coefficient (before optional probability calibration),Logistic Regression
+StreamingTV_No internet service,0.18214790321159804,-0.18214790321159804,0.8334780572175106,category versus StreamingTV=No,raw logistic coefficient (before optional probability calibration),Logistic Regression
+StreamingMovies_No internet service,0.18214790321159804,-0.18214790321159804,0.8334780572175106,category versus StreamingMovies=No,raw logistic coefficient (before optional probability calibration),Logistic Regression
+InternetService_No,0.18214790321159802,-0.18214790321159802,0.8334780572175107,category versus InternetService=DSL,raw logistic coefficient (before optional probability calibration),Logistic Regression
+OnlineSecurity_No internet service,0.18214790321159802,-0.18214790321159802,0.8334780572175107,category versus OnlineSecurity=No,raw logistic coefficient (before optional probability calibration),Logistic Regression
+OnlineBackup_No internet service,0.18214790321159802,-0.18214790321159802,0.8334780572175107,category versus OnlineBackup=No,raw logistic coefficient (before optional probability calibration),Logistic Regression
+SeniorCitizen_Yes,0.16101865982453975,0.16101865982453975,1.1747068884337866,category versus SeniorCitizen=No,raw logistic coefficient (before optional probability calibration),Logistic Regression
+PaymentMethod_Mailed check,0.060939438733135516,0.060939438733135516,1.0628345456315436,category versus PaymentMethod=Bank transfer (automatic),raw logistic coefficient (before optional probability calibration),Logistic Regression
+DeviceProtection_Yes,0.04873389605668788,0.04873389605668788,1.0499409201437904,category versus DeviceProtection=No,raw logistic coefficient (before optional probability calibration),Logistic Regression
+PaymentMethod_Credit card (automatic),0.03936172748066343,0.03936172748066343,1.0401466652411846,category versus PaymentMethod=Bank transfer (automatic),raw logistic coefficient (before optional probability calibration),Logistic Regression
+gender_Male,0.03735602676617038,0.03735602676617038,1.0380625331028688,category versus gender=Female,raw logistic coefficient (before optional probability calibration),Logistic Regression
+Partner_Yes,0.008122534848305071,0.008122534848305071,1.008155612130961,category versus Partner=No,raw logistic coefficient (before optional probability calibration),Logistic Regression
+OnlineBackup_Yes,0.007693599426891117,0.007693599426891117,1.0077232712084174,category versus OnlineBackup=No,raw logistic coefficient (before optional probability calibration),Logistic Regression
+tenure,0.17972657278001145,,,encoded predictor,raw estimator impurity/gain importance (not causal),Random Forest
+TotalCharges,0.13577268481590862,,,encoded predictor,raw estimator impurity/gain importance (not causal),Random Forest
+MonthlyCharges,0.10254829387888773,,,encoded predictor,raw estimator impurity/gain importance (not causal),Random Forest
+Contract_Two year,0.09711355995393339,,,encoded predictor,raw estimator impurity/gain importance (not causal),Random Forest
+InternetService_Fiber optic,0.06734090554095686,,,encoded predictor,raw estimator impurity/gain importance (not causal),Random Forest
+PaymentMethod_Electronic check,0.06148158325352654,,,encoded predictor,raw estimator impurity/gain importance (not causal),Random Forest
+Contract_One year,0.03752891902936777,,,encoded predictor,raw estimator impurity/gain importance (not causal),Random Forest
+OnlineSecurity_Yes,0.033612298160438106,,,encoded predictor,raw estimator impurity/gain importance (not causal),Random Forest
+TechSupport_Yes,0.02906185165182281,,,encoded predictor,raw estimator impurity/gain importance (not causal),Random Forest
+PaperlessBilling_Yes,0.02072448817795918,,,encoded predictor,raw estimator impurity/gain importance (not causal),Random Forest
+DeviceProtection_No internet service,0.017109459379177423,,,encoded predictor,raw estimator impurity/gain importance (not causal),Random Forest
+OnlineSecurity_No internet service,0.016832604992814658,,,encoded predictor,raw estimator impurity/gain importance (not causal),Random Forest
+TechSupport_No internet service,0.016026946311145235,,,encoded predictor,raw estimator impurity/gain importance (not causal),Random Forest
+gender_Male,0.015521889223643512,,,encoded predictor,raw estimator impurity/gain importance (not causal),Random Forest
+StreamingMovies_Yes,0.013690772600531614,,,encoded predictor,raw estimator impurity/gain importance (not causal),Random Forest
+OnlineBackup_Yes,0.013554962981334986,,,encoded predictor,raw estimator impurity/gain importance (not causal),Random Forest
+Partner_Yes,0.012929975732823354,,,encoded predictor,raw estimator impurity/gain importance (not causal),Random Forest
+MultipleLines_Yes,0.012876828102760446,,,encoded predictor,raw estimator impurity/gain importance (not causal),Random Forest
+StreamingTV_No internet service,0.01264009217712993,,,encoded predictor,raw estimator impurity/gain importance (not causal),Random Forest
+OnlineBackup_No internet service,0.012508051304480489,,,encoded predictor,raw estimator impurity/gain importance (not causal),Random Forest
+StreamingMovies_No internet service,0.012388374554535272,,,encoded predictor,raw estimator impurity/gain importance (not causal),Random Forest
+Dependents_Yes,0.012230806710920106,,,encoded predictor,raw estimator impurity/gain importance (not causal),Random Forest
+StreamingTV_Yes,0.011787612316160016,,,encoded predictor,raw estimator impurity/gain importance (not causal),Random Forest
+InternetService_No,0.01069326932966238,,,encoded predictor,raw estimator impurity/gain importance (not causal),Random Forest
+DeviceProtection_Yes,0.01001352274377661,,,encoded predictor,raw estimator impurity/gain importance (not causal),Random Forest
+PaymentMethod_Credit card (automatic),0.009454529759974791,,,encoded predictor,raw estimator impurity/gain importance (not causal),Random Forest
+SeniorCitizen_Yes,0.008483789686140015,,,encoded predictor,raw estimator impurity/gain importance (not causal),Random Forest
+PaymentMethod_Mailed check,0.007853607446691998,,,encoded predictor,raw estimator impurity/gain importance (not causal),Random Forest
+MultipleLines_No phone service,0.004669049138241445,,,encoded predictor,raw estimator impurity/gain importance (not causal),Random Forest
+PhoneService_Yes,0.003822698265243194,,,encoded predictor,raw estimator impurity/gain importance (not causal),Random Forest
+Contract_Two year,0.23619221150875092,,,encoded predictor,raw estimator impurity/gain importance (not causal),XGBoost
+Contract_One year,0.15677964687347412,,,encoded predictor,raw estimator impurity/gain importance (not causal),XGBoost
+InternetService_Fiber optic,0.14223819971084595,,,encoded predictor,raw estimator impurity/gain importance (not causal),XGBoost
+InternetService_No,0.06607379764318466,,,encoded predictor,raw estimator impurity/gain importance (not causal),XGBoost
+PaymentMethod_Electronic check,0.04374999180436134,,,encoded predictor,raw estimator impurity/gain importance (not causal),XGBoost
+OnlineSecurity_No internet service,0.03883063793182373,,,encoded predictor,raw estimator impurity/gain importance (not causal),XGBoost
+tenure,0.034924980252981186,,,encoded predictor,raw estimator impurity/gain importance (not causal),XGBoost
+StreamingMovies_Yes,0.0343070812523365,,,encoded predictor,raw estimator impurity/gain importance (not causal),XGBoost
+OnlineBackup_No internet service,0.029385218396782875,,,encoded predictor,raw estimator impurity/gain importance (not causal),XGBoost
+PaperlessBilling_Yes,0.02567630261182785,,,encoded predictor,raw estimator impurity/gain importance (not causal),XGBoost
+OnlineSecurity_Yes,0.022253109142184258,,,encoded predictor,raw estimator impurity/gain importance (not causal),XGBoost
+MultipleLines_No phone service,0.021014578640460968,,,encoded predictor,raw estimator impurity/gain importance (not causal),XGBoost
+TechSupport_Yes,0.016363002359867096,,,encoded predictor,raw estimator impurity/gain importance (not causal),XGBoost
+TotalCharges,0.015546314418315887,,,encoded predictor,raw estimator impurity/gain importance (not causal),XGBoost
+StreamingTV_Yes,0.01408808771520853,,,encoded predictor,raw estimator impurity/gain importance (not causal),XGBoost
+MultipleLines_Yes,0.0129697285592556,,,encoded predictor,raw estimator impurity/gain importance (not causal),XGBoost
+PhoneService_Yes,0.012153825722634792,,,encoded predictor,raw estimator impurity/gain importance (not causal),XGBoost
+MonthlyCharges,0.010491506196558475,,,encoded predictor,raw estimator impurity/gain importance (not causal),XGBoost
+SeniorCitizen_Yes,0.010035759769380093,,,encoded predictor,raw estimator impurity/gain importance (not causal),XGBoost
+Dependents_Yes,0.009952938184142113,,,encoded predictor,raw estimator impurity/gain importance (not causal),XGBoost
+DeviceProtection_Yes,0.009719771333038807,,,encoded predictor,raw estimator impurity/gain importance (not causal),XGBoost
+gender_Male,0.009610365144908428,,,encoded predictor,raw estimator impurity/gain importance (not causal),XGBoost
+PaymentMethod_Mailed check,0.007819202728569508,,,encoded predictor,raw estimator impurity/gain importance (not causal),XGBoost
+Partner_Yes,0.007316743955016136,,,encoded predictor,raw estimator impurity/gain importance (not causal),XGBoost
+PaymentMethod_Credit card (automatic),0.006510627921670675,,,encoded predictor,raw estimator impurity/gain importance (not causal),XGBoost
+OnlineBackup_Yes,0.005996416788548231,,,encoded predictor,raw estimator impurity/gain importance (not causal),XGBoost
+StreamingTV_No internet service,0.0,,,encoded predictor,raw estimator impurity/gain importance (not causal),XGBoost
+TechSupport_No internet service,0.0,,,encoded predictor,raw estimator impurity/gain importance (not causal),XGBoost
+DeviceProtection_No internet service,0.0,,,encoded predictor,raw estimator impurity/gain importance (not causal),XGBoost
+StreamingMovies_No internet service,0.0,,,encoded predictor,raw estimator impurity/gain importance (not causal),XGBoost
+Contract_Two year,0.1502928933341923,,,encoded predictor,"equal-weight normalized member importance; descriptive heuristic, not SHAP",Hybrid Ensemble
+tenure,0.11050708004693327,,,encoded predictor,"equal-weight normalized member importance; descriptive heuristic, not SHAP",Hybrid Ensemble
+InternetService_Fiber optic,0.1057534571171431,,,encoded predictor,"equal-weight normalized member importance; descriptive heuristic, not SHAP",Hybrid Ensemble
+Contract_One year,0.08445633442317628,,,encoded predictor,"equal-weight normalized member importance; descriptive heuristic, not SHAP",Hybrid Ensemble
+TotalCharges,0.06642445082893741,,,encoded predictor,"equal-weight normalized member importance; descriptive heuristic, not SHAP",Hybrid Ensemble
+MonthlyCharges,0.052809556551701164,,,encoded predictor,"equal-weight normalized member importance; descriptive heuristic, not SHAP",Hybrid Ensemble
+PaymentMethod_Electronic check,0.04886114526759479,,,encoded predictor,"equal-weight normalized member importance; descriptive heuristic, not SHAP",Hybrid Ensemble
+OnlineSecurity_Yes,0.03248652452954523,,,encoded predictor,"equal-weight normalized member importance; descriptive heuristic, not SHAP",Hybrid Ensemble
+InternetService_No,0.03148269080312289,,,encoded predictor,"equal-weight normalized member importance; descriptive heuristic, not SHAP",Hybrid Ensemble
+StreamingMovies_Yes,0.029451721403354135,,,encoded predictor,"equal-weight normalized member importance; descriptive heuristic, not SHAP",Hybrid Ensemble
+TechSupport_Yes,0.0271007773569207,,,encoded predictor,"equal-weight normalized member importance; descriptive heuristic, not SHAP",Hybrid Ensemble
+PaperlessBilling_Yes,0.026953077100870255,,,encoded predictor,"equal-weight normalized member importance; descriptive heuristic, not SHAP",Hybrid Ensemble
+OnlineSecurity_No internet service,0.024448083209922814,,,encoded predictor,"equal-weight normalized member importance; descriptive heuristic, not SHAP",Hybrid Ensemble
+StreamingTV_Yes,0.021385966307283285,,,encoded predictor,"equal-weight normalized member importance; descriptive heuristic, not SHAP",Hybrid Ensemble
+OnlineBackup_No internet service,0.019858092282076672,,,encoded predictor,"equal-weight normalized member importance; descriptive heuristic, not SHAP",Hybrid Ensemble
+PhoneService_Yes,0.019336903678936364,,,encoded predictor,"equal-weight normalized member importance; descriptive heuristic, not SHAP",Hybrid Ensemble
+MultipleLines_Yes,0.019209844675421427,,,encoded predictor,"equal-weight normalized member importance; descriptive heuristic, not SHAP",Hybrid Ensemble
+MultipleLines_No phone service,0.015365733263812308,,,encoded predictor,"equal-weight normalized member importance; descriptive heuristic, not SHAP",Hybrid Ensemble
+Dependents_Yes,0.014159591442767587,,,encoded predictor,"equal-weight normalized member importance; descriptive heuristic, not SHAP",Hybrid Ensemble
+DeviceProtection_No internet service,0.011596822630833292,,,encoded predictor,"equal-weight normalized member importance; descriptive heuristic, not SHAP",Hybrid Ensemble
+SeniorCitizen_Yes,0.011383184035447328,,,encoded predictor,"equal-weight normalized member importance; descriptive heuristic, not SHAP",Hybrid Ensemble
+TechSupport_No internet service,0.01123598494148923,,,encoded predictor,"equal-weight normalized member importance; descriptive heuristic, not SHAP",Hybrid Ensemble
+StreamingTV_No internet service,0.010107033563484129,,,encoded predictor,"equal-weight normalized member importance; descriptive heuristic, not SHAP",Hybrid Ensemble
+StreamingMovies_No internet service,0.01002312768928591,,,encoded predictor,"equal-weight normalized member importance; descriptive heuristic, not SHAP",Hybrid Ensemble
+gender_Male,0.009586128433018946,,,encoded predictor,"equal-weight normalized member importance; descriptive heuristic, not SHAP",Hybrid Ensemble
+DeviceProtection_Yes,0.008154623083045856,,,encoded predictor,"equal-weight normalized member importance; descriptive heuristic, not SHAP",Hybrid Ensemble
+PaymentMethod_Mailed check,0.007196057178883283,,,encoded predictor,"equal-weight normalized member importance; descriptive heuristic, not SHAP",Hybrid Ensemble
+Partner_Yes,0.0070117232868436765,,,encoded predictor,"equal-weight normalized member importance; descriptive heuristic, not SHAP",Hybrid Ensemble
+OnlineBackup_Yes,0.006766064483664206,,,encoded predictor,"equal-weight normalized member importance; descriptive heuristic, not SHAP",Hybrid Ensemble
+PaymentMethod_Credit card (automatic),0.006595327050292078,,,encoded predictor,"equal-weight normalized member importance; descriptive heuristic, not SHAP",Hybrid Ensemble

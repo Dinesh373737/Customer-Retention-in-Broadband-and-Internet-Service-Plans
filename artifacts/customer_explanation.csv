@@ -1,0 +1,20 @@
+feature,value,baseline,contribution,method
+tenure,72.0,30.0,-0.05994262199999665,probability change from replacing one feature with training median/mode
+Contract,Two year,Month-to-month,-0.056921136807879656,probability change from replacing one feature with training median/mode
+OnlineSecurity,Yes,No,-0.009954845687100958,probability change from replacing one feature with training median/mode
+PaymentMethod,Credit card (automatic),Electronic check,-0.00868599289444358,probability change from replacing one feature with training median/mode
+TechSupport,Yes,No,-0.007109146184671839,probability change from replacing one feature with training median/mode
+TotalCharges,8468.2,1405.3,-0.006733981408161839,probability change from replacing one feature with training median/mode
+Dependents,Yes,No,-0.005208183434044949,probability change from replacing one feature with training median/mode
+gender,Male,Female,0.0031467589983642935,probability change from replacing one feature with training median/mode
+MonthlyCharges,114.05,70.4,-0.00237418598527807,probability change from replacing one feature with training median/mode
+StreamingTV,Yes,No,0.0014633142985017757,probability change from replacing one feature with training median/mode
+OnlineBackup,Yes,No,-0.0009855243820071028,probability change from replacing one feature with training median/mode
+MultipleLines,Yes,No,-0.0004716018009212567,probability change from replacing one feature with training median/mode
+DeviceProtection,Yes,No,-0.00037941228706731694,probability change from replacing one feature with training median/mode
+Partner,Yes,No,-0.00019841079392717356,probability change from replacing one feature with training median/mode
+StreamingMovies,Yes,Yes,0.0,probability change from replacing one feature with training median/mode
+PaperlessBilling,Yes,Yes,0.0,probability change from replacing one feature with training median/mode
+InternetService,Fiber optic,Fiber optic,0.0,probability change from replacing one feature with training median/mode
+PhoneService,Yes,Yes,0.0,probability change from replacing one feature with training median/mode
+SeniorCitizen,No,No,0.0,probability change from replacing one feature with training median/mode
