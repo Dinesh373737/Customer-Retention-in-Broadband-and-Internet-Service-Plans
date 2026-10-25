@@ -1,0 +1,15 @@
+fastapi==0.115.6
+starlette>=0.40,<0.42
+pydantic>=2.10,<3
+uvicorn>=0.30,<0.35
+python-multipart>=0.0.20,<0.1
+pandas>=2.2,<3
+numpy>=1.26,<3
+scikit-learn==1.6.1
+xgboost==2.1.4
+scipy>=1.13,<2
+statsmodels>=0.14,<0.15
+joblib>=1.4,<2
+openpyxl>=3.1,<4
+httpx>=0.28,<0.29
+pytest>=8,<10

@@ -1,0 +1,295 @@
+{
+  "version": 2,
+  "minimum_segment_size": 30,
+  "minimum_rate_difference": 0.02,
+  "maximum_adjusted_p": 0.1,
+  "evidence_requirements": [
+    "Confirmed feature meaning",
+    "At least 30 segment and comparison records",
+    "Elevated historical churn with Wilson interval and adjusted association test",
+    "No protected-attribute-only intervention"
+  ],
+  "concepts": {
+    "pricing": {
+      "action": "Review plan or service pricing suitability",
+      "objective": "Assess value and suitability with the customer",
+      "caveat": "Recorded prices do not establish dissatisfaction, affordability or the effectiveness of a discount.",
+      "industries": [
+        "telecommunications",
+        "banking",
+        "ecommerce",
+        "subscription",
+        "generic"
+      ],
+      "trigger_conditions": {
+        "minimum_segment_size": 30,
+        "minimum_comparison_size": 30,
+        "minimum_rate_difference": 0.02,
+        "maximum_adjusted_p": 0.1,
+        "wilson_lower_must_exceed_baseline": true,
+        "customer_risk_threshold": 0.6
+      },
+      "evidence_requirements": [
+        "Analyst-confirmed business meaning tied to an available predictor.",
+        "Historical labels and a segment with elevated observed churn.",
+        "Configured sample-size, interval and multiplicity-adjusted association requirements.",
+        "Model and individual explanations, when available, remain predictive associations."
+      ],
+      "actionability_constraints": [
+        "Never trigger solely on protected, identifying or immutable personal characteristics.",
+        "Only consider an optional review; customer suitability and consent require further context.",
+        "No automatic contact, discount or assertion of a proven churn cause."
+      ],
+      "possible_costs": {
+        "source": "Optional analyst-supplied estimate per considered intervention",
+        "default_per_customer": null,
+        "currency": null,
+        "status": "unknown_until_supplied"
+      }
+    },
+    "lifecycle": {
+      "action": "Consider an optional onboarding or account review",
+      "objective": "Help the customer understand available account services",
+      "caveat": "Account duration does not prove an onboarding problem and cannot itself be changed.",
+      "industries": [
+        "telecommunications",
+        "banking",
+        "ecommerce",
+        "subscription",
+        "generic"
+      ],
+      "trigger_conditions": {
+        "minimum_segment_size": 30,
+        "minimum_comparison_size": 30,
+        "minimum_rate_difference": 0.02,
+        "maximum_adjusted_p": 0.1,
+        "wilson_lower_must_exceed_baseline": true,
+        "customer_risk_threshold": 0.6
+      },
+      "evidence_requirements": [
+        "Analyst-confirmed business meaning tied to an available predictor.",
+        "Historical labels and a segment with elevated observed churn.",
+        "Configured sample-size, interval and multiplicity-adjusted association requirements.",
+        "Model and individual explanations, when available, remain predictive associations."
+      ],
+      "actionability_constraints": [
+        "Never trigger solely on protected, identifying or immutable personal characteristics.",
+        "Only consider an optional review; customer suitability and consent require further context.",
+        "No automatic contact, discount or assertion of a proven churn cause.",
+        "Account duration cannot be changed; only a review or onboarding discussion is considered."
+      ],
+      "possible_costs": {
+        "source": "Optional analyst-supplied estimate per considered intervention",
+        "default_per_customer": null,
+        "currency": null,
+        "status": "unknown_until_supplied"
+      }
+    },
+    "support": {
+      "action": "Review recorded support information and invite voluntary feedback",
+      "objective": "Understand whether an appropriate support review would be useful",
+      "caveat": "A support subscription or statistical association alone is not evidence of a complaint, fault or service failure.",
+      "industries": [
+        "telecommunications",
+        "banking",
+        "ecommerce",
+        "subscription",
+        "generic"
+      ],
+      "trigger_conditions": {
+        "minimum_segment_size": 30,
+        "minimum_comparison_size": 30,
+        "minimum_rate_difference": 0.02,
+        "maximum_adjusted_p": 0.1,
+        "wilson_lower_must_exceed_baseline": true,
+        "customer_risk_threshold": 0.6
+      },
+      "evidence_requirements": [
+        "Analyst-confirmed business meaning tied to an available predictor.",
+        "Historical labels and a segment with elevated observed churn.",
+        "Configured sample-size, interval and multiplicity-adjusted association requirements.",
+        "Model and individual explanations, when available, remain predictive associations."
+      ],
+      "actionability_constraints": [
+        "Never trigger solely on protected, identifying or immutable personal characteristics.",
+        "Only consider an optional review; customer suitability and consent require further context.",
+        "No automatic contact, discount or assertion of a proven churn cause.",
+        "A support subscription is not a complaint or fault; consult the confirmed feature meaning."
+      ],
+      "possible_costs": {
+        "source": "Optional analyst-supplied estimate per considered intervention",
+        "default_per_customer": null,
+        "currency": null,
+        "status": "unknown_until_supplied"
+      }
+    },
+    "engagement": {
+      "action": "Consider a consented account-engagement review",
+      "objective": "Explore appropriate engagement options",
+      "caveat": "Observed activity does not establish personal preferences or the causal benefit of contact.",
+      "industries": [
+        "telecommunications",
+        "banking",
+        "ecommerce",
+        "subscription",
+        "generic"
+      ],
+      "trigger_conditions": {
+        "minimum_segment_size": 30,
+        "minimum_comparison_size": 30,
+        "minimum_rate_difference": 0.02,
+        "maximum_adjusted_p": 0.1,
+        "wilson_lower_must_exceed_baseline": true,
+        "customer_risk_threshold": 0.6
+      },
+      "evidence_requirements": [
+        "Analyst-confirmed business meaning tied to an available predictor.",
+        "Historical labels and a segment with elevated observed churn.",
+        "Configured sample-size, interval and multiplicity-adjusted association requirements.",
+        "Model and individual explanations, when available, remain predictive associations."
+      ],
+      "actionability_constraints": [
+        "Never trigger solely on protected, identifying or immutable personal characteristics.",
+        "Only consider an optional review; customer suitability and consent require further context.",
+        "No automatic contact, discount or assertion of a proven churn cause."
+      ],
+      "possible_costs": {
+        "source": "Optional analyst-supplied estimate per considered intervention",
+        "default_per_customer": null,
+        "currency": null,
+        "status": "unknown_until_supplied"
+      }
+    },
+    "contract": {
+      "action": "Review suitable contract or renewal alternatives",
+      "objective": "Check whether available terms meet the customer's stated needs",
+      "caveat": "No preference or offer acceptance is observed; changing a contract is not proven to prevent churn.",
+      "industries": [
+        "telecommunications",
+        "banking",
+        "ecommerce",
+        "subscription",
+        "generic"
+      ],
+      "trigger_conditions": {
+        "minimum_segment_size": 30,
+        "minimum_comparison_size": 30,
+        "minimum_rate_difference": 0.02,
+        "maximum_adjusted_p": 0.1,
+        "wilson_lower_must_exceed_baseline": true,
+        "customer_risk_threshold": 0.6
+      },
+      "evidence_requirements": [
+        "Analyst-confirmed business meaning tied to an available predictor.",
+        "Historical labels and a segment with elevated observed churn.",
+        "Configured sample-size, interval and multiplicity-adjusted association requirements.",
+        "Model and individual explanations, when available, remain predictive associations."
+      ],
+      "actionability_constraints": [
+        "Never trigger solely on protected, identifying or immutable personal characteristics.",
+        "Only consider an optional review; customer suitability and consent require further context.",
+        "No automatic contact, discount or assertion of a proven churn cause."
+      ],
+      "possible_costs": {
+        "source": "Optional analyst-supplied estimate per considered intervention",
+        "default_per_customer": null,
+        "currency": null,
+        "status": "unknown_until_supplied"
+      }
+    },
+    "satisfaction": {
+      "action": "Review the recorded customer-experience measure and gather context",
+      "objective": "Understand recorded feedback before proposing an intervention",
+      "caveat": "Interpret the confirmed scale carefully; a score does not identify the cause of churn.",
+      "industries": [
+        "telecommunications",
+        "banking",
+        "ecommerce",
+        "subscription",
+        "generic"
+      ],
+      "trigger_conditions": {
+        "minimum_segment_size": 30,
+        "minimum_comparison_size": 30,
+        "minimum_rate_difference": 0.02,
+        "maximum_adjusted_p": 0.1,
+        "wilson_lower_must_exceed_baseline": true,
+        "customer_risk_threshold": 0.6
+      },
+      "evidence_requirements": [
+        "Analyst-confirmed business meaning tied to an available predictor.",
+        "Historical labels and a segment with elevated observed churn.",
+        "Configured sample-size, interval and multiplicity-adjusted association requirements.",
+        "Model and individual explanations, when available, remain predictive associations."
+      ],
+      "actionability_constraints": [
+        "Never trigger solely on protected, identifying or immutable personal characteristics.",
+        "Only consider an optional review; customer suitability and consent require further context.",
+        "No automatic contact, discount or assertion of a proven churn cause."
+      ],
+      "possible_costs": {
+        "source": "Optional analyst-supplied estimate per considered intervention",
+        "default_per_customer": null,
+        "currency": null,
+        "status": "unknown_until_supplied"
+      }
+    },
+    "loyalty": {
+      "action": "Review suitability of an optional loyalty or re-engagement campaign",
+      "objective": "Evaluate a relevant engagement pilot",
+      "caveat": "No discount is automatically applied; campaign effectiveness must be measured independently.",
+      "industries": [
+        "telecommunications",
+        "banking",
+        "ecommerce",
+        "subscription",
+        "generic"
+      ],
+      "trigger_conditions": {
+        "minimum_segment_size": 30,
+        "minimum_comparison_size": 30,
+        "minimum_rate_difference": 0.02,
+        "maximum_adjusted_p": 0.1,
+        "wilson_lower_must_exceed_baseline": true,
+        "customer_risk_threshold": 0.6
+      },
+      "evidence_requirements": [
+        "Analyst-confirmed business meaning tied to an available predictor.",
+        "Historical labels and a segment with elevated observed churn.",
+        "Configured sample-size, interval and multiplicity-adjusted association requirements.",
+        "Model and individual explanations, when available, remain predictive associations."
+      ],
+      "actionability_constraints": [
+        "Never trigger solely on protected, identifying or immutable personal characteristics.",
+        "Only consider an optional review; customer suitability and consent require further context.",
+        "No automatic contact, discount or assertion of a proven churn cause."
+      ],
+      "possible_costs": {
+        "source": "Optional analyst-supplied estimate per considered intervention",
+        "default_per_customer": null,
+        "currency": null,
+        "status": "unknown_until_supplied"
+      }
+    }
+  },
+  "industry_actions": {
+    "telecommunications": {
+      "pricing": "Review broadband plan suitability",
+      "contract": "Review appropriate contract alternatives"
+    },
+    "banking": {
+      "pricing": "Review account-service suitability",
+      "engagement": "Review account engagement and appropriate service options",
+      "support": "Offer an appropriate customer-support review"
+    },
+    "ecommerce": {
+      "engagement": "Consider a suitable re-engagement pilot",
+      "satisfaction": "Review recorded customer-experience feedback",
+      "loyalty": "Evaluate a suitable loyalty campaign"
+    },
+    "subscription": {
+      "pricing": "Review subscription plan suitability",
+      "contract": "Review renewal and subscription-term alternatives"
+    }
+  }
+}

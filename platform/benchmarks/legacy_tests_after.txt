@@ -1,0 +1,8 @@
+...............................................................          [100%]
+============================== warnings summary ===============================
+tests/test_modeling.py::test_persistence_unknown_categories_and_explanations
+  C:\Users\shara\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\preprocessing\_encoders.py:246: UserWarning: Found unknown categories in columns [13] during transform. These unknown categories will be encoded as all zeros
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+63 passed, 1 warning in 18.10s

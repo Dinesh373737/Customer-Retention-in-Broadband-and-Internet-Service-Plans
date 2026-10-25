@@ -1,0 +1,15 @@
+$ vitest run
+
+ RUN  v3.2.7 C:/Users/shara/OneDrive/Desktop/PoME_El/platform/frontend
+
+ ✓ src/test/jobs.test.ts (3 tests) 8ms
+ ✓ src/test/schema.test.ts (7 tests) 13ms
+ ✓ src/test/api.test.ts (5 tests) 23ms
+ ✓ src/test/app.test.tsx (3 tests) 1898ms
+   ✓ frontend navigation and upload (explicitly mocked test fixtures) > preserves a separate IBM entry point and shows honest initial empty states  448ms
+   ✓ frontend navigation and upload (explicitly mocked test fixtures) > uploads, confirms a non-IBM target and excludes its ID before opening analysis  1200ms
+
+ Test Files  4 passed (4)
+      Tests  18 passed (18)
+   Start at  08:39:43
+   Duration  9.01s (transform 628ms, setup 3.45s, collect 2.99s, tests 1.94s, environment 6.14s, prepare 1.51s)
