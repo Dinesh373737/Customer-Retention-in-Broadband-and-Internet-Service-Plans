@@ -1,6 +1,6 @@
 # Retention Lab 2.0
 
-A local, cross-industry customer retention platform using **React / TypeScript / Vite** and **FastAPI / SQLite / Scikit-learn / XGBoost**. It coexists with the preserved IBM Telco Streamlit case study in the repository root. No legacy source, dataset, tests, documentation or analysis artifacts are replaced.
+A local, cross-industry customer retention platform using **React / TypeScript / Vite** and **FastAPI / SQLite / Scikit-learn / XGBoost**. It coexists with the preserved IBM Telco Streamlit case study in the repository root. The root README and launcher point to React by default; legacy source, datasets, tests and analysis artifacts are preserved.
 
 ## Install and run on Windows
 
@@ -30,7 +30,7 @@ On macOS/Linux use `platform/.venv/bin/python` instead of the Windows Python pat
 
 ### Original IBM case study
 
-Keep using the existing root [README](../README.md) and its separate environment:
+Use the [original IBM instructions](../README.md#original-ibm-streamlit-case-study) and its separate environment. The root launcher also accepts `.\launch.ps1 -Legacy`:
 
 ```powershell
 .\.venv\Scripts\python.exe -m streamlit run app.py --server.address 127.0.0.1

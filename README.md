@@ -1,4 +1,34 @@
-# Retention Lab
+# Retention Lab 2.0
+
+**Customer Retention in Broadband and Internet Service Plans** now includes a cross-industry **React / TypeScript frontend** and **FastAPI / SQLite backend**. The current application lives in [`platform/`](platform/); the original IBM Streamlit case study is preserved below.
+
+## Start the React application
+
+From the repository root in PowerShell, run:
+
+```powershell
+# First installation: Python 3.11/3.12, Node.js 22+ and pnpm 11 required
+.\launch.ps1 -Install
+
+# Subsequent launches
+.\launch.ps1
+```
+
+Open **http://127.0.0.1:8000**. FastAPI serves the built React frontend and the API; interactive API documentation is at **http://127.0.0.1:8000/docs**. The root launcher now starts this React application by default.
+
+For separate frontend/backend development commands, dependency setup and the complete workflow, see the [platform setup guide](platform/README.md). Actual [dataset benchmarks](platform/benchmarks/results.md) and [test/browser verification](platform/docs/verification.md) are included.
+
+| Folder | Purpose |
+|---|---|
+| [`platform/frontend/`](platform/frontend/) | React, TypeScript, Vite, Tailwind and the eight application screens |
+| [`platform/backend/`](platform/backend/) | FastAPI, dataset-specific ML, SQLite and background jobs |
+| [`platform/docs/`](platform/docs/) | API, schema, architecture and dataset documentation |
+| [`platform/benchmarks/`](platform/benchmarks/) | Executed benchmark results, tests and desktop/mobile screenshots |
+| `app.py`, `retention/`, `.streamlit/` | Preserved original IBM Streamlit application |
+
+The original application remains available with **`.\launch.ps1 -Legacy`** on port **8501**, using its separate root `.venv`. Its Python source, tests, IBM dataset and saved analysis artifacts remain intact.
+
+## Original IBM Streamlit case study
 
 **Customer Retention in Broadband and Internet Service Plans** — a local Principles of Management and Economics project built with Streamlit, Pandas, Plotly and real fitted machine-learning pipelines.
 
@@ -14,7 +44,7 @@ python -m venv .venv
 .\.venv\Scripts\python.exe -m streamlit run app.py --server.address 127.0.0.1
 ```
 
-Open **http://localhost:8501**. On this workspace the environment and full-data trained artifact have already been prepared. You can launch directly with the third command, or run `launch.ps1` if your PowerShell script policy allows it. Installation needs an internet connection; analysis runs locally afterward.
+Open **http://localhost:8501**. On this workspace the environment and full-data trained artifact have already been prepared. You can launch directly with the third command, or run `launch.ps1 -Legacy` if your PowerShell script policy allows it. Installation needs an internet connection; analysis runs locally afterward.
 
 For a fresh clone, trained binary artifacts are excluded from Git. Click **Train / retrain models** in the sidebar, or run `python -m scripts.train` with the project environment before launching, to reproduce the saved pipelines and model comparison.
 
@@ -109,7 +139,7 @@ Tests cover schema cleaning and invalid inputs, missing values, independent part
 
 ```text
 app.py                         Streamlit entry point
-launch.ps1                     Local Windows launch helper
+launch.ps1                     React launcher; -Legacy starts this Streamlit case study
 requirements*.txt              Core and optional dependencies
 retention/
   data.py                      Schema validation, quality audit, content hashing
