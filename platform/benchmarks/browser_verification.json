@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-25",
+  "method": "Actual local application operated through the browser UI; no mocked API during these checks.",
+  "desktop": {"viewport_width": 1440, "viewport_height": 900, "document_width": 1425, "horizontal_overflow": false},
+  "mobile": {"viewport_width": 390, "viewport_height": 844, "document_width": 390, "horizontal_overflow": false, "navigation_drawer_open_and_close": true},
+  "checks": [
+    "Workspace preserves a separate link to the original IBM application",
+    "Real e-commerce analysis displays 5630 records and computed historical outcomes",
+    "Four-model test table, ranking control and diagnostic model selector work",
+    "SHAP calculation returns actual per-feature attribution values",
+    "Customer search returns an honest empty table",
+    "Batch scoring remains available after an empty historical search",
+    "Browser upload scores 12 actual unlabelled e-commerce records",
+    "Batch individual-explanation selector displays actual-model sensitivities",
+    "Hypothetical budget 1000 and fixed cost 100 cap targeting at 60 records",
+    "Economic scenario computes 6 incremental retained, contribution 1440, net benefit 440 and ROI44percent",
+    "Full analysis report downloads successfully as JSON",
+    "Dataset Studio uploads the actual Iranian CSV and profiles its observed schema",
+    "Analyst selects Churn, positive label1, domain and pre-outcome timing in the wizard",
+    "Charge codes can be explicitly mapped as nominal categories",
+    "Complaint meaning requires analyst entry and explicit confirmation",
+    "New browser analysis trains all four real models using the explicitly selected quick tuning option",
+    "Real training job reaches completed100percent and displays actual held-out metrics",
+    "Generic IBM customer detail restricts what-if edits to confirmed supported inputs",
+    "MonthlyCharges70 produces a genuine selected-model scenario with causal caveats",
+    "All eight screens were navigated and responsive mobile navigation closes after selection"
+  ],
+  "browser_console_errors_observed": [],
+  "screenshots": ["screenshots/desktop-analytics.jpg", "screenshots/mobile-analytics.jpg"],
+  "limitations": "Browser observations complement automated tests; they are not an exhaustive guarantee for every possible dataset. The UI quick-training demonstration is separate from the standard-tuning benchmark results."
+}

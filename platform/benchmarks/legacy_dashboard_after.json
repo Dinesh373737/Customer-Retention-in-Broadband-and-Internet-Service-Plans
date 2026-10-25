@@ -1,0 +1,81 @@
+{
+  "generated_at": "2026-10-25T03:04:54.890989+00:00",
+  "data_hash": "663439c063b78e467836a119a38cd6a921823dabba3b3cb78176ab54023a4f91",
+  "models": [
+    "Logistic Regression",
+    "Random Forest",
+    "XGBoost",
+    "Hybrid Ensemble"
+  ],
+  "all_passed": true,
+  "checks": [
+    {
+      "page": "Executive Overview",
+      "passed": true,
+      "plotly_charts": 5,
+      "tables": 1
+    },
+    {
+      "page": "Exploratory Analysis",
+      "passed": true,
+      "plotly_charts": 14,
+      "tables": 3
+    },
+    {
+      "page": "Model Comparison",
+      "passed": true,
+      "plotly_charts": 8,
+      "tables": 2
+    },
+    {
+      "page": "Explainability",
+      "passed": true,
+      "plotly_charts": 4,
+      "tables": 5
+    },
+    {
+      "page": "Customer Risk Explorer",
+      "passed": true,
+      "plotly_charts": 2,
+      "tables": 2
+    },
+    {
+      "page": "Retention Centre",
+      "passed": true,
+      "plotly_charts": 1,
+      "tables": 2
+    },
+    {
+      "page": "Economic Impact",
+      "passed": true,
+      "plotly_charts": 3,
+      "tables": 1
+    },
+    {
+      "page": "Methodology & Journey",
+      "passed": true,
+      "plotly_charts": 0,
+      "tables": 1
+    },
+    {
+      "control": "contract filter changes KPI to actual group count",
+      "passed": true
+    },
+    {
+      "control": "zero campaign denominators handled",
+      "passed": true
+    },
+    {
+      "control": "model table metric ranking",
+      "passed": true
+    },
+    {
+      "control": "batch scoring remains available with no historical risk rows",
+      "passed": true
+    },
+    {
+      "control": "SHAP summary calculation or explicit fallback",
+      "passed": true
+    }
+  ]
+}

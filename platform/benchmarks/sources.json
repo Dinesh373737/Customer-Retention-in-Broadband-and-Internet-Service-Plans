@@ -1,0 +1,46 @@
+[
+  {
+    "dataset": "iranian",
+    "source": "https://archive.ics.uci.edu/dataset/563/iranian+churn+dataset",
+    "license_note": "CC BY 4.0; UCI Iranian Churn (2020), DOI 10.24432/C5JW3Z",
+    "status": "downloaded",
+    "files": [
+      {
+        "filename": "Customer Churn.csv",
+        "size": 131728,
+        "sha256": "90d5fb6bd1630cd4de4b4d28fcf8b4cb92a8f6ab7484605b0799d47386f7dbe1"
+      }
+    ],
+    "archive_sha256": "696c3a1812267980751f30d19193a1b430ac4ad76172bb089e664c96813ead66"
+  },
+  {
+    "dataset": "banking",
+    "source": "https://www.kaggle.com/datasets/shantanudhakadd/bank-customer-churn-prediction",
+    "license_note": "Consult the dataset card; downloads remain local and are excluded from Git.",
+    "status": "downloaded",
+    "files": [
+      {
+        "filename": "Churn_Modelling.csv",
+        "size": 684858,
+        "sha256": "3996cd1fa372e0db0cd9c0ebac35bbd4e8e3c65fb942bb010c826e7b1eeef0a0"
+      }
+    ],
+    "archive_sha256": "a7a6634afc3a7c42f2feec92085f013ef79dc0903d910709edbbba3af564f4fb",
+    "license_metadata": "Other (specified in description)"
+  },
+  {
+    "dataset": "ecommerce",
+    "source": "https://www.kaggle.com/datasets/ankitverma2010/ecommerce-customer-churn-analysis-and-prediction",
+    "license_note": "Consult the dataset card; downloads remain local and are excluded from Git.",
+    "status": "downloaded",
+    "files": [
+      {
+        "filename": "E Commerce Dataset.xlsx",
+        "size": 555610,
+        "sha256": "db70f1e34bc5326887ea3fb3d2a0854e82c577d55ef3a76fdfb25328631bd44d"
+      }
+    ],
+    "archive_sha256": "8b87f33fff4bbc46fbd327ad45e655dde61b3abb1f70a3550f602a059a244bf4",
+    "license_metadata": "CC BY-NC-SA 4.0"
+  }
+]

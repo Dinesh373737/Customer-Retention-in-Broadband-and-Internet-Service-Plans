@@ -1,0 +1,56 @@
+[
+  {
+    "dataset": "iranian",
+    "rows": 3150,
+    "columns": 14,
+    "features": 10,
+    "class_balance": {
+      "positive": 495,
+      "negative": 2655,
+      "positive_rate": 0.15714285714285714
+    },
+    "warnings": []
+  },
+  {
+    "dataset": "banking",
+    "rows": 10000,
+    "columns": 14,
+    "features": 6,
+    "class_balance": {
+      "positive": 2037,
+      "negative": 7963,
+      "positive_rate": 0.2037
+    },
+    "warnings": [
+      "The prediction horizon is unknown. This dataset does not establish the timing of churn or intervention opportunity."
+    ]
+  },
+  {
+    "dataset": "ecommerce",
+    "rows": 5630,
+    "columns": 20,
+    "features": 15,
+    "class_balance": {
+      "positive": 948,
+      "negative": 4682,
+      "positive_rate": 0.16838365896980462
+    },
+    "warnings": [
+      "The prediction horizon is unknown. This dataset does not establish the timing of churn or intervention opportunity."
+    ]
+  },
+  {
+    "dataset": "ibm",
+    "rows": 7043,
+    "columns": 21,
+    "features": 15,
+    "class_balance": {
+      "positive": 1869,
+      "negative": 5174,
+      "positive_rate": 0.2653698707936959
+    },
+    "warnings": [
+      "The prediction horizon is unknown. This dataset does not establish the timing of churn or intervention opportunity."
+    ]
+  }
+]

@@ -1,0 +1,18 @@
+........................................................................ [ 69%]
+................................                                         [100%]
+============================== warnings summary ===============================
+..\..\..\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\testclient.py:40
+  C:\Users\shara\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\testclient.py:40: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.
+    _PortalFactoryType = typing.Callable[[], typing.ContextManager[anyio.abc.BlockingPortal]]
+
+platform/backend/tests/test_api.py::test_batch_scoring_without_labels_and_unseen_categories_preserves_rows
+platform/backend/tests/test_api.py::test_batch_scoring_without_labels_and_unseen_categories_preserves_rows
+platform/backend/tests/test_api.py::test_batch_scoring_without_labels_and_unseen_categories_preserves_rows
+platform/backend/tests/test_api.py::test_batch_scoring_without_labels_and_unseen_categories_preserves_rows
+platform/backend/tests/test_api.py::test_batch_scoring_without_labels_and_unseen_categories_preserves_rows
+platform/backend/tests/test_generic_ml.py::test_schema_strict_unknown_categories_preserve_batch_rows
+  C:\Users\shara\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\preprocessing\_encoders.py:246: UserWarning: Found unknown categories in columns [0] during transform. These unknown categories will be encoded as all zeros
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+104 passed, 7 warnings in 30.31s
