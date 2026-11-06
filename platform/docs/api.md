@@ -8,6 +8,9 @@ Base: `http://127.0.0.1:8000/api/v1`. Interactive typed documentation: `/docs`; 
 | POST | /datasets/upload | Multipart file plus optional sheet_name; inspect real CSV/XLSX |
 | GET | /datasets | Saved datasets |
 | GET | /datasets/{id}/profile | Quality, schema suggestions, preview, saved configuration |
+| POST | /datasets/sample | Load the bundled IBM Telco CSV (idempotent) |
+| GET | /datasets/{id}/suggested-configuration | Automatically inferred, validator-checked schema with notes and excluded-column reasons |
+| POST | /datasets/{id}/quickstart | Apply the suggested schema, then queue training (labelled) or open a descriptive analysis; body `{train, fast, use_existing}` all optional |
 | POST | /datasets/{id}/configuration | Explicit target/positive class/features/semantics |
 | POST | /analyses | Immutable descriptive/historical analysis snapshot |
 | POST | /analyses/train | Queue new dataset-specific training; returns analysis_id/job_id with HTTP 202 |
@@ -22,6 +25,7 @@ Base: `http://127.0.0.1:8000/api/v1`. Interactive typed documentation: `/docs`; 
 | GET | /analyses/{id}/recommendations | Confirmed semantics, segment/customer evidence and catalogue |
 | POST | /analyses/{id}/batch-score | Multipart compatible unlabelled file; same saved pipelines; limited individual explanations |
 | POST | /analyses/{id}/what-if | Row index, allowed changes and optional model; constrained sensitivity |
+| GET | /analyses/{id}/economics/defaults | Data-derived campaign assumptions plus a plain-language basis for each |
 | POST | /analyses/{id}/economics | Hypothetical budget/cost/contribution/unconditional incremental impact |
 | GET | /analyses/{id}/export | kind=report/customers/metrics/recommendations; JSON or valid CSV |
 

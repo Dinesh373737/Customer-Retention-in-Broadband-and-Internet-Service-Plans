@@ -1,4 +1,4 @@
-import type { Analysis, Configuration, Dataset, Job, Row } from '../types';
+import type { Analysis, Configuration, Dataset, Job, Quickstart, Row } from '../types';
 export const API_BASE = import.meta.env.VITE_API_BASE || '/api/v1';
 export class ApiError extends Error {status:number; constructor(message:string,status:number){super(message);this.name='ApiError';this.status=status}}
 export function errorMessage(value:unknown):string {if(value instanceof Error)return value.message;if(typeof value==='string')return value;return 'An unexpected error occurred.'}
@@ -13,6 +13,9 @@ export const api={
   datasets:()=>request<{datasets:Dataset[]}>('/datasets'),analyses:()=>request<{analyses:Analysis[]}>('/analyses'),
   dataset:(id:string)=>request<Dataset>(`/datasets/${id}/profile`),
   upload:(file:File,sheet?:string)=>{const data=new FormData();data.set('file',file);if(sheet)data.set('sheet_name',sheet);return request<Dataset>('/datasets/upload',{method:'POST',body:data})},
+  sample:()=>request<Dataset>('/datasets/sample',{method:'POST'}),
+  suggest:(id:string)=>request<{configuration:Configuration;notes:string[];excluded:{column:string;reason:string}[]}>(`/datasets/${id}/suggested-configuration`),
+  quickstart:(id:string,options:{train?:boolean;fast?:boolean;use_existing?:boolean}={})=>request<Quickstart>(`/datasets/${id}/quickstart`,{method:'POST',body:JSON.stringify(options)}),
   configure:(id:string,configuration:Configuration)=>request<Row>(`/datasets/${id}/configuration`,{method:'POST',body:JSON.stringify(configuration)}),
   analyze:(dataset_id:string)=>request<Analysis>('/analyses',{method:'POST',body:JSON.stringify({dataset_id})}),
   train:(dataset_id:string,fast:boolean,selection_metric:string,random_state:number)=>request<{analysis_id:string;job_id:string;status:string}>('/analyses/train',{method:'POST',body:JSON.stringify({dataset_id,fast,selection_metric,random_state})}),

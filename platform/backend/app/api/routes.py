@@ -11,7 +11,7 @@ from fastapi.responses import JSONResponse, Response
 
 from ..core.serialization import json_safe, safe_csv
 from ..persistence.store import new_id, utcnow
-from ..schemas.requests import DatasetConfiguration, CreateAnalysis, TrainRequest, WhatIfRequest, EconomicsRequest, JobResponse
+from ..schemas.requests import DatasetConfiguration, CreateAnalysis, TrainRequest, WhatIfRequest, EconomicsRequest, JobResponse, QuickstartRequest
 from ..schemas.responses import (DatasetPayload, DatasetListing, ConfigurationPayload, AnalysisPayload,
     TrainingPayload, ModelPayload, CustomersPayload, CustomerPayload, BatchPayload,
     RecommendationsPayload, EconomicsPayload, WhatIfPayload)
@@ -21,8 +21,10 @@ from ..services.modeling import score_frame, model_report
 from ..services.explainability import global_explanation, customer_explanation
 from ..services.recommendations import generate_recommendations, protected_feature
 from ..services.economics import economic_analysis
+from ..services.autoconfig import suggest_configuration, suggest_economics
 
 router = APIRouter(prefix="/api/v1")
+SAMPLE_DATASET = Path(__file__).resolve().parents[4] / "data" / "Telco-Customer-Churn.csv"
 MAX_UPLOAD_BYTES = 25 * 1024 * 1024
 RECOMMENDATION_EXPORT_COLUMNS = [
     "customer_reference", "churn_probability", "feature", "business_concept", "business_meaning",
@@ -164,12 +166,7 @@ def datasets(rt=Depends(runtime)):
     return response({"datasets": [{key: value for key, value in item.items() if key != "storage_path"} for item in rt.store.list("dataset")]}, schema=DatasetListing)
 
 
-@router.post("/datasets/upload", status_code=201, response_model=DatasetPayload)
-async def upload_dataset(file: Annotated[UploadFile, File()], sheet_name: Annotated[str | None, Form()] = None, rt=Depends(runtime)):
-    contents = await read_upload(file)
-    filename = (file.filename or "upload.csv").replace("\\", "/").split("/")[-1]
-    if len(filename) > 200:
-        raise HTTPException(422, "Use a filename shorter than 200 characters.")
+def store_dataset(rt, contents, filename, sheet_name=None):
     frame = read_table(contents, filename, sheet_name)
     identifier = new_id()
     extension = Path(filename).suffix.lower()
@@ -180,7 +177,27 @@ async def upload_dataset(file: Annotated[UploadFile, File()], sheet_name: Annota
                 "fingerprint": frame_fingerprint(frame), "storage_path": str(path), "sheet_name": sheet_name,
                 "configuration": None, "profile": profile, "preview": profile.get("preview", []),
                 "worksheets": profile.get("worksheets", []), "worksheet": profile.get("worksheet")})
-    return response({key: value for key, value in dataset.items() if key != "storage_path"}, 201, DatasetPayload)
+    return {key: value for key, value in dataset.items() if key != "storage_path"}
+
+
+@router.post("/datasets/upload", status_code=201, response_model=DatasetPayload)
+async def upload_dataset(file: Annotated[UploadFile, File()], sheet_name: Annotated[str | None, Form()] = None, rt=Depends(runtime)):
+    contents = await read_upload(file)
+    filename = (file.filename or "upload.csv").replace("\\", "/").split("/")[-1]
+    if len(filename) > 200:
+        raise HTTPException(422, "Use a filename shorter than 200 characters.")
+    return response(store_dataset(rt, contents, filename, sheet_name), 201, DatasetPayload)
+
+
+@router.post("/datasets/sample", status_code=201, response_model=DatasetPayload)
+def load_sample_dataset(rt=Depends(runtime)):
+    """Load the bundled IBM Telco sample so the platform can be tried without a file."""
+    if not SAMPLE_DATASET.is_file():
+        raise HTTPException(404, "The bundled sample dataset is not available in this installation.")
+    existing = [item for item in rt.store.list("dataset") if item.get("filename") == SAMPLE_DATASET.name]
+    if existing:
+        return response({key: value for key, value in existing[0].items() if key != "storage_path"}, 201, DatasetPayload)
+    return response(store_dataset(rt, SAMPLE_DATASET.read_bytes(), SAMPLE_DATASET.name), 201, DatasetPayload)
 
 
 @router.get("/datasets/{dataset_id}/profile", response_model=DatasetPayload)
@@ -195,6 +212,47 @@ def configure_dataset(dataset_id: str, request: DatasetConfiguration, rt=Depends
     configuration = validate_configuration(rt.frame(dataset), request.model_dump(exclude_none=True))
     rt.store.update("dataset", dataset_id, configuration=configuration)
     return response({"dataset_id": dataset_id, "configuration": configuration, "fingerprint": dataset["fingerprint"]}, schema=ConfigurationPayload)
+
+
+@router.get("/datasets/{dataset_id}/suggested-configuration")
+def suggested_configuration(dataset_id: str, rt=Depends(runtime)):
+    """Automatically inferred schema: outcome, churn label, identifier, predictors and business concepts."""
+    dataset = get_entity(rt, "dataset", dataset_id)
+    return response({"dataset_id": dataset_id, **suggest_configuration(rt.frame(dataset), dataset["profile"])})
+
+
+@router.post("/datasets/{dataset_id}/quickstart", status_code=202)
+def quickstart(dataset_id: str, request: QuickstartRequest | None = None, rt=Depends(runtime)):
+    """One call from uploaded file to running analysis: auto-configure, save, then train when labelled."""
+    request = request or QuickstartRequest()
+    dataset = get_entity(rt, "dataset", dataset_id)
+    frame = rt.frame(dataset)
+    if request.use_existing and dataset.get("configuration"):
+        suggestion = {"configuration": dataset["configuration"], "notes": ["Using the saved schema for this dataset."], "excluded": []}
+    else:
+        suggestion = suggest_configuration(frame, dataset["profile"])
+        rt.store.update("dataset", dataset_id, configuration=suggestion["configuration"])
+        dataset = get_entity(rt, "dataset", dataset_id)
+    configuration = dataset["configuration"]
+    job_id = None
+    trainable = bool(configuration.get("target_column") and configuration.get("features")) and request.train
+    if trainable:
+        y = target_values(frame, configuration)
+        trainable = len(frame) >= 60 and int(y.value_counts().min()) >= 12
+        if not trainable:
+            suggestion["notes"].append("Too few labelled records for reliable model training; opened descriptive analysis instead.")
+    if trainable:
+        analysis = rt.create_analysis(dataset, trained=True)
+        try:
+            job = rt.submit(analysis, {"fast": request.fast, "selection_metric": "pr_auc", "random_state": 42})
+            job_id = job["id"]
+        except ValueError as error:
+            rt.store.update("analysis", analysis["id"], status="failed", error=str(error))
+            raise HTTPException(429, str(error)) from error
+    else:
+        analysis = rt.create_analysis(dataset)
+    return response({**envelope(analysis), "job_id": job_id, "configuration": configuration,
+                     "notes": suggestion["notes"], "excluded": suggestion["excluded"]}, 202)
 
 
 @router.get("/analyses")
@@ -380,6 +438,16 @@ def what_if(analysis_id: str, request: WhatIfRequest, rt=Depends(runtime)):
                      "changes": request.changes, "difference": scenario_score - original_score,
                      "caveats": ["Model sensitivity scenario only; changing an input does not prove a real intervention will reduce churn.",
                                  "Other account inputs remain fixed; real-world feasibility needs analyst review."]}, schema=WhatIfPayload)
+
+
+@router.get("/analyses/{analysis_id}/economics/defaults")
+def economics_defaults(analysis_id: str, model: str | None = None, rt=Depends(runtime)):
+    """Campaign assumptions derived from the dataset (risk band size, pricing columns) for a zero-input start."""
+    analysis, _, frame = snapshot(rt, analysis_id)
+    if model:
+        fitted(rt, analysis, model)
+    scored = customer_table(rt, analysis, frame, model) if analysis.get("artifact_path") and analysis["status"] == "completed" else None
+    return response({**envelope(analysis), **suggest_economics(frame, analysis["configuration"], scored)})
 
 
 @router.post("/analyses/{analysis_id}/economics", response_model=EconomicsPayload)

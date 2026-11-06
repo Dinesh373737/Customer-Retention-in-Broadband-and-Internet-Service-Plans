@@ -48,6 +48,12 @@ class TrainRequest(CreateAnalysis):
     selection_metric: Literal["pr_auc", "roc_auc", "f1", "recall", "precision", "accuracy", "brier"] = "pr_auc"
 
 
+class QuickstartRequest(StrictModel):
+    train: bool = True
+    fast: bool = True
+    use_existing: bool = False
+
+
 class WhatIfRequest(StrictModel):
     row_index: int = Field(ge=0)
     changes: dict[str, Any] = Field(min_length=1, max_length=20)
