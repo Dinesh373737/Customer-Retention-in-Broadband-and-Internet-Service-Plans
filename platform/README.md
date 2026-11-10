@@ -40,7 +40,21 @@ The new Workspace screen links to that independent application at port **8501**.
 
 ## Workflow and supported modes
 
-1. **Dataset Studio:** upload UTF-8 CSV or `.xlsx`. For a workbook with multiple sheets, choose a worksheet explicitly; errors list available names. Inspect actual row/column counts, types, missingness, duplicates and the preview. Public uploads are limited to 25 MiB, 100,000 rows and 200 columns.
+### Automatic setup (default)
+
+Drop a CSV/`.xlsx` on **Home** (or click **Use IBM Telco sample**) and nothing else is required. The backend:
+
+- detects the churn outcome (`Churn`, `Exited`, `Attrition`, …), its positive label (`Yes`, `1`, `True`, `Churned`, otherwise the minority class) and the customer ID (preferring business keys over row numbers);
+- selects predictors with inferred types, and leaves out identifiers, names/contact fields, possible post-outcome columns, constants and free text. Every suggestion still passes the same validator, so target proxies are dropped with the reason shown in **Data setup**;
+- infers the business domain and maps columns to business concepts from their names (pricing, contract, support, engagement, …) so recommendations and what-if scenarios work immediately. Protected attributes are never actionable;
+- trains the four models in quick mode, then fills Insights, Models, Explainability, Customers and the Retention plan;
+- seeds the campaign economics from the data (High-risk customer count, median monthly charge) and calculates the scenario on page load.
+
+Explainability and the Retention plan pick customers through a searchable, risk-ordered picker (defaulting to the highest-risk customer) instead of row indexes. **Data setup → Adjust manually** opens the original three-step editor, pre-filled with the automatic choices, for anything that was misread.
+
+### Manual steps (optional)
+
+1. **Upload:** upload UTF-8 CSV or `.xlsx`. For a workbook with multiple sheets, choose a worksheet explicitly; errors list available names. Inspect actual row/column counts, types, missingness, duplicates and the preview. Public uploads are limited to 25 MiB, 100,000 rows and 200 columns.
 2. **Confirm the schema:** choose an outcome and its positive label, optional ID, excluded columns, feature types, domain and known prediction timing. Inferred suggestions are editable. Targets and IDs cannot become predictors; names/contact information and reserved output fields must be excluded. Constants, invalid values and target proxies produce useful errors. At most 100 predictors are supported, with categorical/dense-memory safeguards.
 3. **Confirm business meaning:** optionally map a feature to pricing, lifecycle, support, engagement, contract, satisfaction or loyalty. Enter its meaning and explicitly confirm it. Unknown features may predict but cannot invent retention actions. Protected/immutable attributes cannot drive recommendations or what-if edits.
 4. **Explore:** analytics, category counts and confidence intervals, numeric distributions, box summaries, correlations, relationships and statistical associations adapt to the configured schema. Filters affect descriptive/customer outputs, never held-out metrics.

@@ -6,7 +6,7 @@ import numpy as np
 import pandas as pd
 from scipy import stats
 
-from .data_engine import json_safe, target_values, prepare_features
+from .data_engine import json_safe, target_values, prepare_features, is_protected
 
 
 def apply_filters(df, filters=None):
@@ -80,7 +80,15 @@ def overview(df, config, filters=None):
         summaries.append({"feature": column, "mean": values.mean(), "median": values.median(),
                           "min": values.min(), "max": values.max(), "missing": int(values.isna().sum())})
     segments = [{"feature": column, "groups": segment_summary(frame, column, config)}
-                for column in categorical_features[:3]]
+                for column in categorical_features]
+    if has_target:
+        # Lead with the segments that separate churners most clearly; protected attributes go last.
+        def spread(item):
+            rates = [row["churn_rate"] for row in item["groups"] if row["count"] >= 30 and row["churn_rate"] is not None]
+            return max(rates) - min(rates) if len(rates) > 1 else -1.
+        protected = {s["column"] for s in config.get("semantics", []) if s.get("protected")}
+        segments.sort(key=lambda item: (is_protected(item["feature"]) or item["feature"] in protected, -spread(item)))
+    segments = segments[:3]
     findings = []
     if len(frame):
         findings.append(f"The selected view contains {len(frame):,} of {len(df):,} customer records.")
